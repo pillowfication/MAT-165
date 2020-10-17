@@ -1,0 +1,40 @@
+{
+  "name": "MAT-168",
+  "version": "0.0.0",
+  "description": "MAT-168",
+  "author": {
+    "name": "Markus Tran",
+    "email": "thebluepillow@gmail.com",
+    "url": "http://pillowfication.com"
+  },
+  "homepage": "https://github.com/pillowfication/MAT-168",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pillowfication/MAT-168.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pillowfication/MAT-168/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@svgr/webpack": "^5.4.0",
+    "airbnb-prop-types": "^2.16.0",
+    "file-loader": "^6.1.0",
+    "globby": "^11.0.1",
+    "highlight.js": "^10.1.2",
+    "next": "^9.5.3",
+    "raw-loader": "^4.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-highlight.js": "^1.0.7",
+    "url-loader": "^4.1.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4"
+  }
+}

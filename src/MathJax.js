@@ -7,7 +7,7 @@ import Highlight from './Highlight'
 
 const setImmediatePolyfill = typeof setImmediate !== 'undefined'
   ? setImmediate
-  : (action) => setTimeout(action, 1)
+  : (action) => setTimeout(action, 100)
 
 let calledRender = false
 function queueRenderMath () {
@@ -46,13 +46,9 @@ const MathJaxComponent = ({ $, $$ }) => {
   useEffect(() => { setIsMounted(true) }, [])
 
   return (
-    !isMounted || typeof MathJax === 'undefined'
-      ? $$
-        ? <Highlight language='latex' className={classes.noMathJaxBlock}>{`\\[${$$}\\]`}</Highlight>
-        : <span className={classes.noMathJaxInline}>{`\\(${$}\\)`}</span>
-      : $$
-        ? <div className={classes.mathJaxBlock}>{`\\[${$$}\\]`}</div>
-        : <span className={classes.mathJaxInline}>{`\\(${$}\\)`}</span>
+    $$
+      ? <div className={classes.mathJaxBlock}>{`\\[${$$}\\]`}</div>
+      : <span className={classes.mathJaxInline}>{`\\(${$}\\)`}</span>
   )
 }
 

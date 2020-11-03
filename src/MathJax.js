@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import AirbnbPropTypes from 'airbnb-prop-types'
-import Highlight from './Highlight'
 
 const setImmediatePolyfill = typeof setImmediate !== 'undefined'
   ? setImmediate
@@ -21,20 +20,10 @@ function queueRenderMath () {
 }
 
 const useStyles = makeStyles((theme) => ({
-  noMathJaxBlock: {
-    marginBottom: theme.spacing(2)
-  },
-  noMathJaxInline: {
-    fontFamily: 'monospace',
-    whiteSpace: 'normal',
-    wordWrap: 'break-word'
-  },
   mathJaxBlock: {
     maxWidth: '100%',
     overflowX: 'auto',
     fontSize: '1.125em'
-  },
-  mathJaxInline: {
   }
 }))
 
@@ -48,7 +37,7 @@ const MathJaxComponent = ({ $, $$ }) => {
   return (
     $$
       ? <div className={classes.mathJaxBlock}>{`\\[${$$}\\]`}</div>
-      : <span className={classes.mathJaxInline}>{`\\(${$}\\)`}</span>
+      : `\\(${$}\\)`
   )
 }
 

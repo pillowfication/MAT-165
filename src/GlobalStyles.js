@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
         visibility: 'hidden',
         pageBreakAfter: 'always'
       }
+    },
+    img: {
+      maxWidth: '100%'
     }
   }
 }))
